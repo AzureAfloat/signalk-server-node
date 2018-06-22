@@ -1,7 +1,9 @@
+const _ = require('lodash')
+
 module.exports = {
-  startServerP: function startServerP (port) {
+  startServerP: function startServerP (port, settings) {
     const Server = require('../lib')
-    const server = new Server({
+    var opts = {
       config: {
         defaults: {
           vessels: {
@@ -27,7 +29,11 @@ module.exports = {
           }
         }
       }
-    })
+    }
+    if (!_.isUndefined(settings)) {
+      _.merge(opts.config.settings, settings)
+    }
+    const server = new Server(opts)
     return server.start()
   }
 }
