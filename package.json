@@ -123,7 +123,7 @@
     "pem": "^1.11.0",
     "please-upgrade-node": "^3.0.1",
     "primus": "^7.0.0",
-    "serialport": "^6.0.0",
+    "serialport": "6.2.0",
     "split": "^1.0.0",
     "stat-mode": "^0.2.2",
     "stream-throttle": "^0.1.3",
